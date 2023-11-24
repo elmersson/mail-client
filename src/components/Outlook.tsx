@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Archive,
   Calendar,
@@ -15,10 +17,16 @@ import {
   Unread,
 } from "@/lib/icons";
 import { Button } from "./ui/button";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@radix-ui/react-accordion";
 
 export default function Outlook() {
   return (
-    <div className="flex flex-row min-w-full">
+    <div className="flex flex-row min-w-full min-h-full">
       <Sidebar />
       <div className="w-full">
         <Header />
@@ -30,10 +38,10 @@ export default function Outlook() {
 
 function Header() {
   return (
-    <header className="bg-blue-500 py-4 shadow-md flex flex-row justify-between items-center px-4">
+    <header className="bg-blue-500 py-2 shadow-md flex flex-row justify-between items-center px-4">
       <div className="flex flex-row items-center space-x-4">
         <Hamburger />
-        <Button size="sm">
+        <Button size="xs" className="">
           <Edit />
           <span className="ml-2">New Email</span>
         </Button>
@@ -89,8 +97,46 @@ function Sidebar() {
 
 function MainPane() {
   return (
-    <main className="bg-white overflow-y-auto shadow-xl">
-      <span>Main</span>
-    </main>
+    <div className="flex flex-row overflow-y-hidden space-x-2">
+      <div className="bg-slate-500 w-[25%]">
+        <Accordion type="multiple">
+          <AccordionItem value="item-1">
+            <AccordionTrigger>Favorites</AccordionTrigger>
+            <AccordionContent>
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-2">
+            <AccordionTrigger>All Accounts</AccordionTrigger>
+            <AccordionContent>
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-3">
+            <AccordionTrigger>Rasmus.elmersson@regent.se</AccordionTrigger>
+            <AccordionContent>
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-4">
+            <AccordionTrigger>
+              Rasmus.elmersson@martinservera.se
+            </AccordionTrigger>
+            <AccordionContent>
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </div>
+      <div className="bg-slate-500 w-[15%]">
+        <span>Main</span>
+      </div>
+      <div className="bg-slate-500 w-[40%]">
+        <span>Main</span>
+      </div>
+      <div className="bg-slate-500 w-[20%]">
+        <span>Main</span>
+      </div>
+    </div>
   );
 }
