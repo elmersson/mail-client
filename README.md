@@ -20,7 +20,7 @@ A outlook designed app for a personal website: [MacOS](https://github.com/elmers
 
 ### :man_in_tuxedo: Project: [Linear](https://linear.app/).
 
-### :technologist: Frontend: [NextJS](https://github.com/vercel/next.js), [Vercel Postgres](https://vercel.com/docs/storage/vercel-postgres), [TailwindCSS](https://github.com/tailwindlabs/tailwindcss), [TypeScript](https://github.com/microsoft/TypeScript).
+### :technologist: Frontend: [NextJS](https://github.com/vercel/next.js), [Vercel Postgres](https://vercel.com/docs/storage/vercel-postgres), [TailwindCSS](https://github.com/tailwindlabs/tailwindcss), [Shadcn](https://github.com/shadcn-ui/ui), [TypeScript](https://github.com/microsoft/TypeScript).
 
 ## Getting Started
 
