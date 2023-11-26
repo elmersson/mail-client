@@ -15,6 +15,7 @@ A outlook designed app for a personal website: [MacOS](https://github.com/elmers
 - [ ] Layout
 - [ ] Data for mails
 - [ ] Send mail
+- [ ] Darkmode
 
 ## Tech-stack
 
